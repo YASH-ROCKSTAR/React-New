@@ -20,16 +20,27 @@ export class CFunctionClick extends Component {
     console.log("hello Ajay",this.props.roll)
   }  
   render() {
-    const numbers=[3,4,5,6];
-    const newNumbers= numbers.map(function(numbers){
-        return <li>{numbers}</li>
-    })
+    const numbers=this.props.numbers;
+    // const newNumbers= numbers.map((numbers)=>{ return <li>{numbers}</li> })
+    
+    // console.log(numbers)
+        
+    // const newNumbers= numbers.map((numbers)=>{
+    //     console.log(numbers)
+    //     return <li>{numbers}</li>
+    // })
     return (
       <React.Fragment>
         <button onClick={this.changeEvent}>Hit Me</button>
         {/* {this.state.course} */}
         {this.state.roll}
-        <ul>{newNumbers}</ul>
+        <ul>
+        {
+           // numbers.map((numbers)=> <li>{numbers}</li> )
+           numbers.length>0 &&
+            numbers.map((numbers,ind)=>{ return <li key={numbers}>{numbers}</li> })
+        }
+        </ul>
         {numbers[0]}
       </React.Fragment>
       

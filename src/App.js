@@ -2,6 +2,9 @@ import React from 'react'
 import './App.css';
 import {Header} from './component/Header'
 import CHeader from './component/CHeader'
+import Channel from './component/Channel';
+import FunctionClick from './component/Function\Click';
+import CFunctionClick from './component/CFunctionClick';
 // const name=<span>Hello React</span>
 
 // const newElement=React.createElement('h2',{className:'newElement'},'hello h2 tag')
@@ -29,8 +32,15 @@ class App extends React.Component{
   render(){
     return(
     <div className="App">
-      <Header/>
-      <CHeader/>
+      <Header name="Anuj" last="sharma"/>
+      <p>Hello i am YASH</p>
+      <Header name="Vivek" last="verma"/>
+      <a href=''>Click here</a>
+      <Header name="rahul"/>
+      <CHeader name="Yash" last="Nigam"/>
+      <Channel/>   
+      <FunctionClick/>  
+      <CFunctionClick roll="60"/>
     </div>
     )
   }
